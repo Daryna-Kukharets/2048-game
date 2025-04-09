@@ -38,9 +38,7 @@ class Game {
 
       this.state[row][col] = Math.random() < 0.9 ? 2 : 4;
 
-      return {
-        row, col,
-      };
+      return { row, col };
     }
 
     return null;
@@ -184,9 +182,7 @@ class Game {
         if (originalState[r][c] !== 0) {
           const key = `${originalState[r][c]}_${r}_${c}`;
 
-          prevPositions.set(key, {
-            row: r, col: c,
-          });
+          prevPositions.set(key, { row: r, col: c });
         }
       }
     }
